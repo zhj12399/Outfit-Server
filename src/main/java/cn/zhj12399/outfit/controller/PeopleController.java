@@ -14,8 +14,8 @@ public class PeopleController {
     private PeopleService peopleService;
 
     @RequestMapping(value = "add_people", method = RequestMethod.POST)
-    public void addPeople(@RequestBody People people) {
-        peopleService.addPeople(people);
+    public void addPeople(String name, String password) {
+        peopleService.addPeople(new People(name, password));
     }
 
     @RequestMapping(value = "judge_password", method = RequestMethod.POST)

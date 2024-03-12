@@ -7,8 +7,9 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class PeopleServiceImp implements PeopleService {
+
     @Autowired
-    private PeopleMapper peopleMapper;
+    PeopleMapper peopleMapper;
 
     @Override
     public String getPasswordByName(String name) {
@@ -17,7 +18,7 @@ public class PeopleServiceImp implements PeopleService {
 
     @Override
     public void addPeople(People people) {
-        peopleMapper.insertPeople(people.getName(),people.getPassword());
+        peopleMapper.insertPeople(people);
     }
 
 }
