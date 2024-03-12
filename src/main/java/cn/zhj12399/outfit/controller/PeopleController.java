@@ -19,8 +19,8 @@ public class PeopleController {
     }
 
     @RequestMapping(value = "judge_password", method = RequestMethod.POST)
-    public boolean judgePassword(String password) {
-        String peopleRightPassword = peopleService.getPasswordByName(password);
+    public boolean judgePassword(String name, String password) {
+        String peopleRightPassword = peopleService.getPasswordByName(name);
         return peopleRightPassword.equals(password);
     }
 }
