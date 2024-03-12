@@ -1,6 +1,5 @@
 package cn.zhj12399.outfit.controller;
 
-
 import cn.zhj12399.outfit.entity.People;
 import cn.zhj12399.outfit.service.PeopleService;
 import org.springframework.beans.factory.annotation.Autowired;
