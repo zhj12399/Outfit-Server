@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 @Component(value = "PeopleMapper")
 public interface PeopleMapper {
     @Insert("insert into people(name, password) values(#{name},#{password})")
-    void insertPeople(People people);
+    void insertPeople(String name, String password);
 
     @Select("select password from people where name=#{name}")
     String selectPassword(String name);
