@@ -14,13 +14,18 @@ public class PeopleController {
     private PeopleService peopleService;
 
     @RequestMapping(value = "add_people", method = RequestMethod.POST)
-    public void addPeople(String name, String password) {
-        peopleService.addPeople(new People(name, password));
+    public void addPeople(@RequestBody People people) {
+        peopleService.addPeople(people);
     }
 
     @RequestMapping(value = "judge_password", method = RequestMethod.POST)
-    public boolean judgePassword(String name, String password) {
-        String peopleRightPassword = peopleService.getPasswordByName(name);
-        return peopleRightPassword.equals(password);
+    public boolean judgePassword(@RequestBody People people) {
+        String peopleRightPassword = peopleService.getPasswordByName(people.getName());
+        if(peopleRightPassword==null){
+            return false;
+        }
+        else{
+            return peopleRightPassword.equals(people.getPassword());
+        }
     }
 }
