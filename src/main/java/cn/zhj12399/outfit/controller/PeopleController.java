@@ -1,6 +1,7 @@
 package cn.zhj12399.outfit.controller;
 
 import cn.zhj12399.outfit.entity.People;
+import cn.zhj12399.outfit.service.OutfitService;
 import cn.zhj12399.outfit.service.PeopleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -11,6 +12,9 @@ import org.springframework.web.bind.annotation.*;
 public class PeopleController {
     @Autowired
     private PeopleService peopleService;
+
+//    @Autowired
+//    private OutfitService outfitService;
 
     @RequestMapping(value = "add_people", method = RequestMethod.POST)
     public void addPeople(@RequestBody People people) {

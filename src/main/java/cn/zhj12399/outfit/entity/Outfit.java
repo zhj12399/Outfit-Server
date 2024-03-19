@@ -5,7 +5,8 @@ public class Outfit {
     private int month;
     private int day;
 
-    private String hat;
+    private int T;
+
     private String up;
     private String down;
     private String shoes;
@@ -13,11 +14,11 @@ public class Outfit {
 
     public Outfit() {}
 
-    public Outfit(int year, int month, int day, String hat, String up, String down, String shoes, String hands) {
+    public Outfit(int year, int month, int day, int T, String up, String down, String shoes, String hands) {
         this.year = year;
         this.month = month;
         this.day = day;
-        this.hat = hat;
+        this.T = T;
         this.up = up;
         this.down = down;
         this.shoes = shoes;

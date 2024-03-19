@@ -9,8 +9,9 @@ import org.springframework.web.bind.annotation.*;
 @CrossOrigin
 @RequestMapping("/api/outfit")
 public class OutfitController {
-    @Autowired
-    OutfitService outfitService;
+//    @Autowired
+//    OutfitService outfitService;
+
 
 
 }

@@ -11,4 +11,15 @@ public interface PeopleMapper {
 
     @Select("select password from people where name=#{name}")
     String selectPassword(String name);
+
+    @Update("create table if not exists outfit_${name}(" +
+            " year int," +
+            " month int," +
+            " day int," +
+            " t int,"+
+            " up char(255),"+
+            " down char(255),"+
+            " shoes char(255),"+
+            " hands char(255));")
+    void addPeopleOutfitList(@Param("name") String name);
 }

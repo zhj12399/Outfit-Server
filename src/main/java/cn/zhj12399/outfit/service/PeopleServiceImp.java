@@ -19,6 +19,7 @@ public class PeopleServiceImp implements PeopleService {
     @Override
     public void addPeople(People people) {
         peopleMapper.insertPeople(people);
+        peopleMapper.addPeopleOutfitList(people.getName());
     }
 
 }
