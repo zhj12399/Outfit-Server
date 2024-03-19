@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class PeopleServiceImp implements PeopleService {
-
     @Autowired
     PeopleMapper peopleMapper;
 
