@@ -13,9 +13,6 @@ public class PeopleController {
     @Autowired
     private PeopleService peopleService;
 
-//    @Autowired
-//    private OutfitService outfitService;
-
     @RequestMapping(value = "add_people", method = RequestMethod.POST)
     public void addPeople(@RequestBody People people) {
         peopleService.addPeople(people);
