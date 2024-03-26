@@ -6,6 +6,7 @@ import cn.zhj12399.outfit.mapper.OutfitMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+@Service
 public class OutfitServiceImp implements OutfitService {
     @Autowired
     OutfitMapper outfitMapper;
@@ -14,5 +15,10 @@ public class OutfitServiceImp implements OutfitService {
     public void addOutfit(OutfitName outfitName){
         String name = outfitName.getName();
 
+    }
+
+    @Override
+    public Outfit getLastOutfitByName(String name){
+        return outfitMapper.getLastOutfit(name);
     }
 }

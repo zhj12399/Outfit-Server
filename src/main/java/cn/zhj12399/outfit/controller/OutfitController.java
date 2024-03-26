@@ -18,4 +18,8 @@ public class OutfitController {
         outfitService.addOutfit(outfitName);
     }
 
+    @RequestMapping(value = "get_last_outfit",method = RequestMethod.POST)
+    public Outfit get_last_outfit(@RequestParam("username") String name) {
+        return outfitService.getLastOutfitByName(name);
+    }
 }

@@ -21,5 +21,5 @@ public interface PeopleMapper {
             " down char(255),"+
             " shoes char(255),"+
             " hands char(255));")
-    void addPeopleOutfitList(@Param("name") String name);
+    void addPeopleOutfitList(String name);
 }
