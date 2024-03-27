@@ -13,6 +13,7 @@ public interface PeopleMapper {
     String selectPassword(String name);
 
     @Update("create table if not exists outfit_${name}(" +
+            " id int AUTO_INCREMENT PRIMARY KEY,"+
             " year int," +
             " month int," +
             " day int," +
@@ -21,5 +22,5 @@ public interface PeopleMapper {
             " down char(255),"+
             " shoes char(255),"+
             " hands char(255));")
-    void addPeopleOutfitList(String name);
+    void addPeopleOutfitList(@Param("name") String name);
 }
