@@ -10,6 +10,6 @@ public interface OutfitMapper {
     @Insert("insert into outfit_${name}(year, month, day, t, up, down, shoes, hands) values(#{year},#{month},#{day},#{t},#{up},#{down},#{shoes},#{hands})")
     void insertOutfit(OutfitName outfitname);
 
-    @Select("select * from outfit_${name} ORDER BY id DESC LIMIT 1")
+    @Select("select year, month, day, t, up, down, shoes, hands from outfit_${name} ORDER BY id DESC LIMIT 1")
     Outfit getLastOutfit(@Param("name") String name);
 }

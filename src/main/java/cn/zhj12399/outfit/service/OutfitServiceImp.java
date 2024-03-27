@@ -12,13 +12,13 @@ public class OutfitServiceImp implements OutfitService {
     OutfitMapper outfitMapper;
 
     @Override
-    public void addOutfit(OutfitName outfitName){
+    public void addOutfit(OutfitName outfitName) {
         String name = outfitName.getName();
 
     }
 
     @Override
-    public Outfit getLastOutfitByName(String name){
+    public Outfit getLastOutfitByName(String name) {
         return outfitMapper.getLastOutfit(name);
     }
 }
