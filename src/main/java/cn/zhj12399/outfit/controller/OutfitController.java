@@ -22,4 +22,9 @@ public class OutfitController {
     public Outfit get_last_outfit(@RequestParam("name") String name) {
         return outfitService.getLastOutfitByName(name);
     }
+
+    @RequestMapping(value = "get_all_outfit",method = RequestMethod.POST)
+    public Outfit[] getOutfitsByName(@RequestParam("name") String name){
+        return outfitService.getAllOutfitsByName(name);
+    }
 }

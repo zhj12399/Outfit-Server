@@ -12,4 +12,7 @@ public interface OutfitMapper {
 
     @Select("select year, month, day, t, up, down, shoes, hands from outfit_${name} ORDER BY id DESC LIMIT 1")
     Outfit getLastOutfit(@Param("name") String name);
+
+    @Select("select year, month, day, t, up, down, shoes, hands from outfit_${name} order by id desc limit 20")
+    Outfit[] getOutfits(@Param("name") String name);
 }

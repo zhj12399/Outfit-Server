@@ -6,4 +6,5 @@ import cn.zhj12399.outfit.entity.OutfitName;
 public interface OutfitService {
     void addOutfit(OutfitName outfitName);
     Outfit getLastOutfitByName(String name);
+    Outfit[] getAllOutfitsByName(String name);
 }

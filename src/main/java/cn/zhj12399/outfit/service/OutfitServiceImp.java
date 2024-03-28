@@ -21,4 +21,9 @@ public class OutfitServiceImp implements OutfitService {
     public Outfit getLastOutfitByName(String name) {
         return outfitMapper.getLastOutfit(name);
     }
+
+    @Override
+    public Outfit[] getAllOutfitsByName(String name){
+        return outfitMapper.getOutfits(name);
+    }
 }
