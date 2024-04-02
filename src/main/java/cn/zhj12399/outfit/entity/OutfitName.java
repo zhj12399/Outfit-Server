@@ -17,6 +17,7 @@ public class OutfitName {
     }
 
     public OutfitName(String name, int year, int month, int day, int T, String up, String down, String shoes, String hands) {
+        this.name = name;
         this.year = year;
         this.month = month;
         this.day = day;
@@ -33,5 +34,56 @@ public class OutfitName {
 
     public String getName() {
         return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+    public int getYear() {
+        return year;
+    }
+    public void setYear(int year) {
+        this.year = year;
+    }
+    public int getMonth() {
+        return month;
+    }
+    public void setMonth(int month) {
+        this.month = month;
+    }
+    public int getDay() {
+        return day;
+    }
+    public void setDay(int day) {
+        this.day = day;
+    }
+    public int getT() {
+        return T;
+    }
+    public void setT(int T) {
+        this.T = T;
+    }
+    public String getUp() {
+        return up;
+    }
+    public void setup(String up) {
+        this.up = up;
+    }
+    public String getDown() {
+        return down;
+    }
+    public void setDown(String down) {
+        this.down = down;
+    }
+    public String getShoes() {
+        return shoes;
+    }
+    public void setShoes(String shoes) {
+        this.shoes = shoes;
+    }
+    public String getHands() {
+        return hands;
+    }
+    public void setHands(String hands) {
+        this.hands = hands;
     }
 }

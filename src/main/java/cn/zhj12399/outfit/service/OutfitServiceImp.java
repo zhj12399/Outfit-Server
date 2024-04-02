@@ -13,8 +13,8 @@ public class OutfitServiceImp implements OutfitService {
 
     @Override
     public void addOutfit(OutfitName outfitName) {
-        String name = outfitName.getName();
-
+        outfitMapper.insertOutfit(outfitName);
+        System.out.println(outfitName.getName());
     }
 
     @Override
