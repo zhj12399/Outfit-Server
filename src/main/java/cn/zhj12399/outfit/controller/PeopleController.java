@@ -21,10 +21,9 @@ public class PeopleController {
     @RequestMapping(value = "judge_password", method = RequestMethod.POST)
     public boolean judgePassword(@RequestBody People people) {
         String peopleRightPassword = peopleService.getPasswordByName(people.getName());
-        if(peopleRightPassword==null){
+        if (peopleRightPassword == null) {
             return false;
-        }
-        else{
+        } else {
             return peopleRightPassword.equals(people.getPassword());
         }
     }
